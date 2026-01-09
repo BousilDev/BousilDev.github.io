@@ -10,7 +10,7 @@ const CVs = [
 const Home = () => {
   return (
     <div className="flex min-h-svh flex-col items-center justify-center">
-      <h3>Welcome to Oliver's CV Site</h3>
+      <h1>Welcome to Oliver's CV Site</h1>
       {CVs.map((cv) => (
         <Button key={cv.name} asChild>
           <Link to={cv.path}>{cv.name}</Link>
