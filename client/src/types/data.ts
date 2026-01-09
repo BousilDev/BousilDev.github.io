@@ -12,9 +12,22 @@ export type ProfileCardProps = {
   status: string;
   contactText: string;
   avatarUrl?: string;
+  iconUrl?: string;
+  grainUrl?: string;
 };
 
 export type GitHubProps = {
   show: boolean;
   repoUrl: string;
+};
+
+export type GitHubRepo = {
+  id: number;
+  name: string;
+  html_url: string;
+  description: string;
+  created_at: string;
+  stargazers_count: number;
+  forks_count: number;
+  language: string;
 };

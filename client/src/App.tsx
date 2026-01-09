@@ -16,6 +16,7 @@ import { CVData, profileCardProps, githubProps } from "@/utils/utils";
 import Particles from "@/components/Particles";
 
 const showSinglePage = true;
+const showParticleBackground = true;
 
 const PrismElem = () => {
   return (
@@ -64,7 +65,7 @@ const Background = () => {
         pointerEvents: "none",
       }}
     >
-      <ParticleElem />
+      {showParticleBackground ? <ParticleElem /> : <PrismElem />}
     </div>
   );
 };

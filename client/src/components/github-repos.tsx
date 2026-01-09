@@ -8,9 +8,10 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { GitHubCalendar } from "react-github-calendar";
+import type { GitHubRepo } from "@/types/data";
 
 function GitHubRepos({ repoUrl }: { repoUrl: string }) {
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState<GitHubRepo[]>([]);
   const username = repoUrl.split("github.com/")[1];
 
   useEffect(() => {

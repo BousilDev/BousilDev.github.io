@@ -35,7 +35,7 @@ const Cv = ({
           behindGlowEnabled={false}
         />
         <div className="rounded-xl border bg-card/50 text-card-foreground shadow-lg backdrop-blur p-6 w-full max-w-md">
-          <Accordion type="multiple" collapsible className="w-full">
+          <Accordion type="multiple" className="w-full">
             {CVData.map((item, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
                 <AccordionTrigger>{item.header}</AccordionTrigger>
