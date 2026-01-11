@@ -9,7 +9,7 @@ export const profileCardProps: ProfileCardProps[] = [
     status: "Online",
     contactText: "Contact Me",
     avatarUrl:
-      "https://raw.githubusercontent.com/BousilDev/BousilDev.github.io/client/src/assets/image.png",
+      "https://raw.githubusercontent.com/BousilDev/BousilDev.github.io/main/client/src/assets/image.png",
     iconUrl: "https://github.githubassets.com/favicons/favicon.svg",
     grainUrl: "",
   },
