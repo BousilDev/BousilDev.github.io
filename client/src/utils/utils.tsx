@@ -9,7 +9,7 @@ export const profileCardProps: ProfileCardProps[] = [
     status: "Online",
     contactText: "Contact Me",
     avatarUrl:
-      "https://cdn.discordapp.com/attachments/535511927351148548/1459132419612475445/cv.png?ex=69622a76&is=6960d8f6&hm=dc88f7506eac1262341f10c1cd1569a7d63239daf945c0a4a7b95828a74b80da",
+      "https://raw.githubusercontent.com/BousilDev/BousilDev.github.io/client/src/assets/image.png",
     iconUrl: "https://github.githubassets.com/favicons/favicon.svg",
     grainUrl: "",
   },
