@@ -11,6 +11,7 @@ export type ProfileCardProps = {
   handle: string;
   status: string;
   contactText: string;
+  email: string;
   avatarUrl: string;
   iconUrl?: string;
   grainUrl?: string;

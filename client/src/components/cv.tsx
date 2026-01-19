@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import type { CVItem, ProfileCardProps, GitHubProps } from "@/types/data";
 import GitHubRepos from "@/components/github-repos";
+import { useScroll } from "@/utils/scroll-context";
 
 const Cv = ({
   profileCardProps,
@@ -17,6 +18,8 @@ const Cv = ({
   CVData: CVItem[];
   githubProps: GitHubProps;
 }) => {
+  const { cvRef, isPdfVisible, showPdf } = useScroll();
+
   return (
     <div
       style={{
@@ -31,7 +34,9 @@ const Cv = ({
           showUserInfo
           enableMobileTilt
           {...profileCardProps}
-          onContactClick={() => console.log("Contact button clicked")}
+          onContactClick={() =>
+            (window.location.href = `mailto:${profileCardProps.email}`)
+          }
           behindGlowEnabled={false}
         />
         <div className="rounded-xl border bg-card/50 text-card-foreground shadow-lg backdrop-blur p-6 w-full max-w-md">
@@ -48,6 +53,20 @@ const Cv = ({
       {githubProps && githubProps.show && (
         <div>
           <GitHubRepos repoUrl={githubProps.repoUrl} />
+        </div>
+      )}
+      {isPdfVisible && showPdf && (
+        <div
+          ref={cvRef}
+          style={{ width: "100%", height: "800px", border: "1px solid #ccc" }}
+        >
+          <iframe
+            src={`${import.meta.env.BASE_URL}CV.pdf`}
+            title="My CV"
+            width="100%"
+            height="100%"
+            style={{ border: "none" }}
+          />
         </div>
       )}
     </div>

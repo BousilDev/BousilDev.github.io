@@ -8,6 +8,7 @@ export const profileCardProps: ProfileCardProps[] = [
     handle: "BousilDev",
     status: "Online",
     contactText: "Contact Me",
+    email: "contact.bousildev@gmail.com",
     avatarUrl:
       "https://raw.githubusercontent.com/BousilDev/BousilDev.github.io/main/client/src/assets/image.png",
     iconUrl: "https://github.githubassets.com/favicons/favicon.svg",

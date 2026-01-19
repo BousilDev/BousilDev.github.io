@@ -14,6 +14,7 @@ import { Outlet } from "react-router-dom";
 import { CVData, profileCardProps, githubProps } from "@/utils/utils";
 
 import Particles from "@/components/Particles";
+import { ScrollProvider } from "@/utils/scroll-context";
 
 const showSinglePage = true;
 const showParticleBackground = true;
@@ -74,7 +75,7 @@ const Layout = () => {
   return (
     <>
       <Background />
-      <NavBar visible={!showSinglePage} />
+      <NavBar visible={!showSinglePage} email={profileCardProps[0].email} />
       <ModeToggle />
       <Outlet />
     </>
@@ -142,16 +143,18 @@ const singlePageRouter = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "*",
-    element: <Navigate to="/" />,
-  },
+  // {
+  //   path: "*",
+  //   element: <Navigate to="/" />,
+  // },
 ]);
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <RouterProvider router={showSinglePage ? singlePageRouter : router} />
+      <ScrollProvider>
+        <RouterProvider router={showSinglePage ? singlePageRouter : router} />
+      </ScrollProvider>
     </ThemeProvider>
   );
 }
