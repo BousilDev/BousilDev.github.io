@@ -1,0 +1,9 @@
+services:
+  webserver:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: simple_CV
+    restart: always
+    ports:
+      - "3000:80"
